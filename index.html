@@ -1,0 +1,79 @@
+<!--
+    1. una funzione che generi una lista col nuovo task
+        //agganciarsi nell'html
+        //usare template literals per stampare direttamente anche dell'html
+        //inputField.value
+
+    2. una funzione che cambi la classe dell'elemento e lo fa sbarrare
+        //agganciarsi all'html
+        //ciclo for per applicare a ciascun elemento una classe(classList.toggle) text-decoration:line.through(per fare sbarrato)
+    3. una funzione che elimina il task 
+        //agganciarsi all'html
+        //ciclo for per selezionare solo quello che stai utilizzando e rimuovilo
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <main>
+
+    <form id="aggiungiTask" onsubmit="handleSubmit(event)">
+        <p>TO DO LIST</p>
+        <input type="text" placeholder="Scrivi qui" id="nuovoTask">
+        <button type="submit">OK</button>
+    </form>
+    </div>
+    <div>
+        <ul id="listaTask"></ul>
+    </div>
+    </main>
+
+    <script>
+          
+        const handleSubmit = function (e){
+            e.preventDefault();
+            nuovoTask();;
+            eliminaTask();
+            barraTask();
+        }
+
+        let bottone = document.getElementById("aggiungiTask");
+        let lista = document.getElementById("listaTask");
+
+        function nuovoTask() {
+        let copy = document.getElementById("nuovoTask").value; 
+        let nuovoLi = document.createElement("li");
+        let button = document.createElement("button");
+
+        button.textContent = "delete";
+        button.classList.add("custom");
+
+        nuovoLi.textContent = copy; 
+        lista.appendChild(nuovoLi); 
+        nuovoLi.appendChild(button);
+        
+        }
+
+        function eliminaTask() {
+            let delete2 = document.getElementById("demo");
+            miop.remove();
+        }
+                           
+
+        function barraTask() {
+            document.getElementById("").innerHTML += "Click event"+ "<br>";
+        }
+
+            window.onload = function() {
+            let form = document.querySelector('form')
+            form.addEventListener('submit', handleSubmit)
+            }  
+    </script>
+</body>
+</html>

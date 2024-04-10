@@ -1,0 +1,42 @@
+body {
+    background-color: pink;
+}
+
+#aggiungiTask {
+    text-align: center;
+    color: black;
+    background-color: white;
+    margin-top: 13%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 2%;
+    padding: 3%;
+    border-radius: 5vh;
+}
+
+#listaTask {
+    text-align: left;
+    list-style-type: none;
+    color: black;
+    background-color: white;
+    margin: 13%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 0%;
+    padding: 3%;
+    border-radius: 5vh;
+}
+
+#listaTask li {
+    background-color: blueviolet;
+}
+
+#nuovoTask {
+    width: 50%;
+}
+
+
+.custom {
+    background-color: grey;
+    float: right;
+}
